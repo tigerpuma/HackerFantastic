@@ -60,6 +60,7 @@ def main(cert_path, data_path):
       for x in [0, mod, e, d, p2, q2, dp, dq, qinv]:
         seq.setComponentByPosition (len (seq), Integer (x))
       print("\n\n-----BEGIN RSA PRIVATE KEY-----\n%s-----END RSA PRIVATE KEY-----\n\n"%base64.encodestring(encoder.encode(seq)).decode('ascii'))
+      sys.exit(0)
   sys.stdout.write(chr(27) + '[%dG'%(1) + chr(27) + '[0K')
     
 if __name__ == '__main__':
