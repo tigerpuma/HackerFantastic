@@ -15,6 +15,7 @@ def onselect(event):
         value = w.get(index)
         nsescript = open("/usr/local/share/nmap/scripts/"+value)
 	parseme = False
+	description = ""
 	for line in nsescript.readlines():
 		if parseme == True:
 			if "]]" in line:
