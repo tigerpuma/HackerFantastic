@@ -27,6 +27,7 @@ def onselect(event):
 			parseme = True
 	text.delete('0.0',END)
 	text.insert(END,description)
+	nsescript.close()
 
 if __name__ == "__main__":
 	root.title("NSE script discoverer!")
