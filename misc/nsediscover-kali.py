@@ -41,8 +41,8 @@ if __name__ == "__main__":
 	root.geometry('%dx%d+%d+%d' % (w, h, x, y))
 	scrollbar = Scrollbar(root)
 	scrollbar.pack(side=LEFT, fill=Y)
-	
 	files = os.listdir("/usr/share/nmap/scripts")
+	files.sort() 
 	listbox = Listbox(root, yscrollcommand=scrollbar.set)
 	for row in xrange(0,len(files)):
 		if ".nse" in files[row]:
